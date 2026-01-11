@@ -23,8 +23,8 @@ type Projects struct {
 	ID          int    `json:"id"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
-	Tech_stack  int    `json:"tech_stack"`
-	Repo_url    int    `json:"repo_url"`
+	Tech_stack  string `json:"tech_stack"`
+	Repo_url    string `json:"repo_url"`
 	Live_url    string `json:"live_url"`
 }
 
