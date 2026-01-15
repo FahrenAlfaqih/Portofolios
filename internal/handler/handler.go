@@ -30,7 +30,9 @@ func GetExperiences(c *gin.Context) {
 
 		return
 	}
-	c.JSON(http.StatusOK, experiences)
+	c.JSON(http.StatusOK, gin.H{
+		"data": experiences,
+	})
 }
 
 func GetProjects(c *gin.Context) {
