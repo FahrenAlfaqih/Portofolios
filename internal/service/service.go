@@ -8,10 +8,10 @@ import (
 func GetProfile() (model.Profile, error) {
 	return repository.GetProfile()
 }
-func GetExperiences() (model.Experiences, error) {
+func GetExperiences() ([]model.Experiences, error) {
 	return repository.GetExperiences()
 }
-func GetProjects() (model.Projects, error) {
+func GetProjects() ([]model.Projects, error) {
 	return repository.GetProjects()
 }
 func GetSkills() (model.Skills, error) {

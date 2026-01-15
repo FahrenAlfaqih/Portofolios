@@ -43,7 +43,9 @@ func GetProjects(c *gin.Context) {
 		})
 		return
 	}
-	c.JSON(http.StatusOK, projects)
+	c.JSON(http.StatusOK, gin.H{
+		"data": projects,
+	})
 
 }
 

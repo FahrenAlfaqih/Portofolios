@@ -35,57 +35,79 @@ func GetProfile() (model.Profile, error) {
 	return profile, nil
 }
 
-func GetExperiences() (model.Experiences, error) {
-	var experiences model.Experiences
+func GetExperiences() ([]model.Experiences, error) {
+	var experiences []model.Experiences
 
 	query := `
 	SELECT id, company, role, start_date, end_date, description
-	FROM experiences
-	LIMIT 1`
+	FROM experiences ORDER BY start_date DESC`
 
-	row := database.DB.QueryRow(query)
-	err := row.Scan(
-		&experiences.ID,
-		&experiences.Company,
-		&experiences.Role,
-		&experiences.Start_date,
-		&experiences.End_date,
-		&experiences.Description,
-	)
-
+	rows, err := database.DB.Query(query)
 	if err != nil {
-		if err == sql.ErrNoRows {
-			return experiences, nil
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	for rows.Next() {
+		var exp model.Experiences
+		err := rows.Scan(
+			&exp.ID,
+			&exp.Company,
+			&exp.Role,
+			&exp.Start_date,
+			&exp.End_date,
+			&exp.Description,
+		)
+
+		if err != nil {
+			return nil, err
 		}
-		return experiences, err
+
+		experiences = append(experiences, exp)
+	}
+
+	if err = rows.Err(); err != nil {
+		return nil, err
 	}
 
 	return experiences, nil
 }
 
-func GetProjects() (model.Projects, error) {
-	var projects model.Projects
+func GetProjects() ([]model.Projects, error) {
+	var projects []model.Projects
 
 	query := `
 	SELECT id, name, description, tech_stack, repo_url, live_url
-	FROM projects
-	LIMIT 1`
+	FROM projects ORDER BY id ASC`
 
-	row := database.DB.QueryRow(query)
-	err := row.Scan(
-		&projects.ID,
-		&projects.Name,
-		&projects.Description,
-		&projects.Tech_stack,
-		&projects.Repo_url,
-		&projects.Live_url,
-	)
-
+	rows, err := database.DB.Query(query)
 	if err != nil {
-		if err == sql.ErrNoRows {
-			return projects, nil
+		return nil, err
+	}
+
+	defer rows.Close()
+
+	for rows.Next() {
+		var proj model.Projects
+		err := rows.Scan(
+			&proj.ID,
+			&proj.Name,
+			&proj.Description,
+			&proj.Tech_stack,
+			&proj.Repo_url,
+			&proj.Live_url,
+		)
+
+		if err != nil {
+			return nil, err
 		}
-		return projects, err
+
+		projects = append(projects, proj)
+	}
+
+	if err = rows.Err(); err != nil {
+		return nil, err
 	}
 
 	return projects, nil
