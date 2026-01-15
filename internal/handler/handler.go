@@ -60,5 +60,7 @@ func GetSkills(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, skills)
+	c.JSON(http.StatusOK, gin.H{
+		"data": skills,
+	})
 }

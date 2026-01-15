@@ -14,6 +14,6 @@ func GetExperiences() ([]model.Experiences, error) {
 func GetProjects() ([]model.Projects, error) {
 	return repository.GetProjects()
 }
-func GetSkills() (model.Skills, error) {
+func GetSkills() ([]model.Skills, error) {
 	return repository.GetSkills()
 }

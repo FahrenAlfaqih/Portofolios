@@ -113,26 +113,37 @@ func GetProjects() ([]model.Projects, error) {
 	return projects, nil
 }
 
-func GetSkills() (model.Skills, error) {
-	var skills model.Skills
+func GetSkills() ([]model.Skills, error) {
+	var skills []model.Skills
 
 	query := `
 	SELECT id, name, level
-	FROM skills
-	LIMIT 1`
+	FROM skills ORDER BY id ASC`
 
-	row := database.DB.QueryRow(query)
-	err := row.Scan(
-		&skills.ID,
-		&skills.Name,
-		&skills.Level,
-	)
+	rows, err := database.DB.Query(query)
 
 	if err != nil {
-		if err == sql.ErrNoRows {
-			return skills, nil
+		return nil, err
+	}
+
+	defer rows.Scan()
+
+	for rows.Next() {
+		var skl model.Skills
+		err := rows.Scan(
+			&skl.ID,
+			&skl.Name,
+			&skl.Level,
+		)
+
+		if err != nil {
+			return nil, err
 		}
-		return skills, err
+
+		skills = append(skills, skl)
+	}
+	if err = rows.Err(); err != nil {
+		return nil, err
 	}
 
 	return skills, nil
