@@ -2,18 +2,8 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav
-      style={{ padding: "20px", backgroundColor: "#333", marginBottom: "20px" }}
-    >
-      <ul
-        style={{
-          listStyle: "none",
-          display: "flex",
-          gap: "20px",
-          margin: "0",
-          padding: "0",
-        }}
-      >
+    <nav className="bg-gray-800 shadow-lg sticky top-0 z-50 w-full">
+      <ul className="flex justify-center items-center gap-12 py-5 px-6 text-white">
         <li>
           <Link to="/" style={{ color: "white", textDecoration: "none" }}>
             Home

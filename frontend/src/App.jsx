@@ -1,4 +1,3 @@
-import ExperienceList from "./components/ExperienceList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -12,9 +11,8 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <div
-        style={{ padding: "20px", maxWidth: "800px", margin: "0 auto" }}
-      >
+
+      <main className="max-w-6xl mx-auto px-6 py-10 min-h-[calc(100vh-80px)]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -23,7 +21,7 @@ function App() {
           <Route path="/skill" element={<Skills />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </div>
+      </main>
     </BrowserRouter>
   );
 }
