@@ -9,6 +9,12 @@ export default function ProjectList() {
 
   return (
     <div>
+      <h2 className="text-2xl mb-6 font-bold text-white bg-clip-text text-transparent">
+        Project
+      </h2>
+
+      <p className="text-sm text-gray-500 mb-14 ">Beberapa project yang pernah dikembangkan sebelumnya</p>
+
       {projects.length === 0 ? (
         <p>Belum ada project</p>
       ) : (

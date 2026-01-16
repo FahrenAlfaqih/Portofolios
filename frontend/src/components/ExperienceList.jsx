@@ -9,6 +9,12 @@ export default function ExperienceList() {
 
   return (
     <div>
+      <h2 className="text-2xl mb-6 font-bold text-white bg-clip-text text-transparent">
+        Experience
+      </h2>
+
+      <p className="text-sm text-gray-500 mb-14 ">beberapa pengalaman</p>
+
       {experiences.length === 0 ? (
         <p>Belum ada pengalaman</p>
       ) : (
