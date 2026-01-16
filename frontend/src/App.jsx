@@ -12,19 +12,23 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <BrowserRouter>
-      <Sidebar />
+      <div className="min-h-screen bg-black">
+        <Sidebar />
 
-      <main className="max-w-6xl mx-auto px-6 py-10 min-h-[calc(100vh-80px)] ml-72">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/skill" element={<Skills />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+        <main className="lg:ml-72 px-6 py-10 min-h-screen pt-20 lg:pt-10">
+          <div className="max-w-6xl mx-auto">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/project" element={<Projects />} />
+              <Route path="/skill" element={<Skills />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+        </main>
+      </div>
     </BrowserRouter>
   );
 }
