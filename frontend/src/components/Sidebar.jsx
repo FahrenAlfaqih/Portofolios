@@ -45,14 +45,14 @@ export default function Sidebar() {
       >
         {/* Profile Section */}
         <div className="p-6 border-b border-gray-700">
-          <div className="w-24 h-24 mb-4 rounded-full overflow-hidden ring-4 ring-blue-500 ring-offset-4 ring-offset-gray-800">
+          <div className="w-24 h-24 mb-4 rounded-full overflow-hidden  ring-offset-4 ring-offset-gray-800">
             <img
-              src="https://ui-avatars.com/api/?name=Fahren+Alfaqih&background=3b82f6&color=fff&size=200"
+              src="/img/profile.png"
               alt="Profile"
               className="w-full h-full object-cover"
             />
           </div>
-          <h2 className="text-xl font-bold text-white">
+          <h2 classNafme="text-xl font-bold text-white">
             Fahren Alfaqih
           </h2>
           <p className="text-sm text-gray-400 mt-1">@fahrenalfaqih</p>
