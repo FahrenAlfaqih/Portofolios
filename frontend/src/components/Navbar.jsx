@@ -5,11 +5,13 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full flex justify-center py-6 px-6">
       <div className="bg-gray-900/90 backdrop-blur-lg rounded-full px-8 py-4 shadow-2xl border border-gray-700/50">
         <ul className="flex justify-center items-center gap-12 py-5 px-6 text-white">
+          
           <li>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>
               Home
             </Link>
           </li>
+
           <li>
             <Link
               to="/about"
@@ -18,6 +20,7 @@ export default function Navbar() {
               About
             </Link>
           </li>
+
           <li>
             <Link
               to="/experience"
@@ -26,6 +29,7 @@ export default function Navbar() {
               Experiences
             </Link>
           </li>
+
           <li>
             <Link
               to="/project"
@@ -34,6 +38,7 @@ export default function Navbar() {
               Projects
             </Link>
           </li>
+
           <li>
             <Link
               to="/skill"
@@ -42,6 +47,7 @@ export default function Navbar() {
               Skills
             </Link>
           </li>
+          
         </ul>
       </div>
     </nav>

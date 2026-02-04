@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   return (
     <>
-      
+
       <button
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-gray-800 text-white hover:bg-gray-700 transition"
@@ -27,7 +27,6 @@ export default function Sidebar() {
         </svg>
       </button>
 
-      
       {isOpen && (
         <div
           onClick={closeSidebar}
@@ -35,7 +34,6 @@ export default function Sidebar() {
         />
       )}
 
-      
       <aside
         className={`
           fixed left-0 top-0 h-screen w-72 bg-black shadow-2xl flex flex-col overflow-y-auto z-40 transition-transform duration-300
@@ -43,6 +41,7 @@ export default function Sidebar() {
           lg:translate-x-0
         `}
       >
+
         {/* Profile Section */}
         <div className="p-6 border-b border-gray-700">
           <div className="w-24 h-24 mb-4 rounded-full overflow-hidden  ring-offset-4 ring-offset-gray-800">
@@ -57,7 +56,7 @@ export default function Sidebar() {
           </h2>
           <p className="text-sm text-gray-400 mt-1">@fahrenalfaqih</p>
         </div>
-
+        
         {/* Navigation Menu */}
         <nav className="flex-1 px-4 py-6">
           {/* Home */}
@@ -141,7 +140,9 @@ export default function Sidebar() {
             </a>
           </div>
         </div>
+
       </aside>
+      
     </>
   );
 }
