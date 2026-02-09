@@ -5,13 +5,17 @@ export default function Home() {
     { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
     { name: 'Kotlin', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg' },
     { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+    { name: 'TypeScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
     { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg' },
     { name: 'CodeIgniter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg' },
     { name: 'Yii2', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yii/yii-original.svg' },
     { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+    { name: 'Go', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    { name: 'Next.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
     { name: 'Vue.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
     { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
-    { name: 'Go', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
     { name: 'Flask', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
     { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
     { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
@@ -29,12 +33,18 @@ export default function Home() {
       <h1 className="font-bold text-3xl">Hi, I'm Fahren Al Faqih</h1>
       <p className="text-gray-400 mt-2 text-sm">Based in Pekanbaru, Indonesia</p>
       <p className="text-gray-300 mt-6">
-        Experienced and passionate Software Engineer specializing in building scalable and efficient digital solutions.
+        Experienced and passionate Software Engineer specializing in building scalable and efficient digital solutions. Primarily focused on backend development, I design and build robust server-side applications, 
+    RESTful APIs, and database architectures using technologies like Laravel, Go, Node Js, and various database systems. 
+    I'm passionate about creating efficient, secure, and maintainable code. While my expertise lies in backend systems, I'm versatile in software development and capable of working 
+    across the full stack when needed. I enjoy tackling complex business logic, optimizing database queries, 
+    and designing scalable system architectures.
       </p>
 
-      {/* Skills Section */}
+    <div className="my-12 border-t border-gray-700"></div>
+
       <div className="mt-12">
-        <h2 className="font-semibold text-xl mb-6">Skills & Technologies</h2>
+        <h2 className="font-semibold text-xl">Skills & Technologies</h2>
+        <p className="text-gray-400 text-sm mt-2 mb-5">My Technical Skills </p>
         <div className="flex flex-wrap gap-8 items-center">
           {skills.map((skill) => (
             <div 
