@@ -21,13 +21,13 @@ export default function ExperienceList() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-4xl mx-auto p-8">
       <div className="mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+        <h2 className="font-bold text-3xl mb-2">
           Work Experience
         </h2>
-        <p className="text-gray-600 dark:text-gray-400">
-          Perjalanan saya dalam pengembangan software
+        <p className="text-gray-400 text-sm">
+          My journey in software development
         </p>
       </div>
 

@@ -1,15 +1,12 @@
 export default function About() {
   return (
     <div className="max-w-4xl mx-auto p-8">
-      {/* Header */}
       <div className="mb-12">
         <h1 className="font-bold text-3xl mb-2">About Me</h1>
         <p className="text-gray-400 text-sm">Get to know me better</p>
       </div>
 
-      {/* Main Content */}
       <div className="space-y-8">
-        {/* Educational Background */}
         <div>
           <h2 className="font-semibold text-xl text-gray-200 mb-4">Educational Background</h2>
           <p className="text-gray-300 leading-relaxed">
@@ -19,10 +16,8 @@ export default function About() {
           </p>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-gray-700"></div>
 
-        {/* Journey to Development */}
         <div>
           <h2 className="font-semibold text-xl text-gray-200 mb-4">How I Got Into Coding</h2>
           <p className="text-gray-300 leading-relaxed mb-4">
@@ -39,10 +34,8 @@ export default function About() {
 
 
 
-        {/* Divider */}
         <div className="border-t border-gray-700"></div>
 
-        {/* Problem Solving Approach */}
         <div>
           <h2 className="font-semibold text-xl text-gray-200 mb-4">How I Solve Problems</h2>
           <p className="text-gray-300 leading-relaxed mb-4">

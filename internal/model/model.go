@@ -26,6 +26,7 @@ type Projects struct {
 	Tech_stack  string `json:"tech_stack"`
 	Repo_url    string `json:"repo_url"`
 	Live_url    string `json:"live_url"`
+	Image_url   string `json:"image_url"`
 }
 
 type Skills struct {

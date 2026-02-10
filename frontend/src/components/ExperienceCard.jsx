@@ -34,10 +34,10 @@ export default function ExperienceCard({ experience }) {
 
         <div className="flex-1 min-w-0">
           <div className="mb-2">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1  ">
+            <h3 className="text-l font-bold text-gray-900 dark:text-white mb-1  ">
               {experience.company}
             </h3>
-            <p className="text-md font-semibold text-white ">
+            <p className="text-gray-400 text-sm ">
               {experience.role}
             </p>
           </div>

@@ -78,7 +78,7 @@ func GetProjects() ([]model.Projects, error) {
 	var projects []model.Projects
 
 	query := `
-	SELECT id, name, description, tech_stack, repo_url, live_url
+	SELECT id, name, description, tech_stack, repo_url, live_url, image_url
 	FROM projects ORDER BY id ASC`
 
 	rows, err := database.DB.Query(query)
@@ -97,6 +97,7 @@ func GetProjects() ([]model.Projects, error) {
 			&proj.Tech_stack,
 			&proj.Repo_url,
 			&proj.Live_url,
+			&proj.Image_url,
 		)
 
 		if err != nil {
