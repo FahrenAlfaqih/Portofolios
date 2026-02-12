@@ -4,7 +4,7 @@ export const projects = [
     name: "Personal Portfolio",
     description:
       "A modern portfolio website showcasing projects, skills, and professional experience. Built with React and Tailwind CSS for a responsive UI.",
-    tech_stack: "React.js, Tailwind CSS, Golang, Gin Framework, PostgreSQL",
+    tech_stack: "React.js, Tailwind CSS",
     repo_url: "https://github.com/FahrenAlfaqih/Portofolios",
     live_url: "",
     image_url: "/assets/projects/portof.png",
