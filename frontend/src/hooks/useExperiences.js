@@ -26,21 +26,12 @@
 //       return { experiences, loading, error}
 // }
 
-import { useEffect, useState } from "react";
 import { experiences as staticExperiences } from "../data/experiences";
 
 export function useExperiences() {
-  const [experiences, setExperiences] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error] = useState(null);
-
-  useEffect(() => {
-    // setLoading(true);
-    setTimeout(() => {
-      setExperiences(staticExperiences);
-      setLoading(false);
-    }, 300);
-  }, []);
-
-  return { experiences, loading, error };
+  return {
+    experiences: staticExperiences,
+    loading: false,
+    error: null,
+  };
 }
