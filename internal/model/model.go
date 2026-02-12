@@ -1,5 +1,7 @@
 package model
 
+import "database/sql"
+
 type Profile struct {
 	ID       int    `json:"id"`
 	Name     string `json:"name"`
@@ -20,13 +22,13 @@ type Experiences struct {
 }
 
 type Projects struct {
-	ID          int    `json:"id"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	Tech_stack  string `json:"tech_stack"`
-	Repo_url    string `json:"repo_url"`
-	Live_url    string `json:"live_url"`
-	Image_url   string `json:"image_url"`
+	ID          int            `json:"id"`
+	Name        string         `json:"name"`
+	Description string         `json:"description"`
+	Tech_stack  string         `json:"tech_stack"`
+	Repo_url    string         `json:"repo_url"`
+	Live_url    sql.NullString `json:"live_url"`
+	Image_url   string         `json:"image_url"`
 }
 
 type Skills struct {

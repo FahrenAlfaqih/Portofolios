@@ -21,8 +21,7 @@ export default function ProjectList() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
-      {/* Header */}
+    <div className="max-w-7xl mx-auto p-8">
       <div className="mb-12">
         <h2 className="font-bold text-3xl mb-2">
           Projects
@@ -32,7 +31,6 @@ export default function ProjectList() {
         </p>
       </div>
 
-      {/* Project List */}
       {projects.length === 0 ? (
         <div className="text-center py-12 bg-gray-50 dark:bg-gray-800 rounded-xl">
           <svg
@@ -53,7 +51,7 @@ export default function ProjectList() {
           </p>
         </div>
       ) : (
-        <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
