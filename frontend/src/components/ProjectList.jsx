@@ -21,7 +21,7 @@ export default function ProjectList() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl ">
       <div className="mb-12">
         <h2 className="font-bold text-3xl mb-2">
           Projects

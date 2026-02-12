@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <div className="max-w-4xl ">
       <div className="mb-12">
         <h1 className="font-bold text-3xl mb-2">About Me</h1>
         <p className="text-gray-400 text-sm">Get to know me better</p>

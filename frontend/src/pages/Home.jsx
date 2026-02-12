@@ -29,7 +29,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <div className="max-w-4xl ">
       <h1 className="font-bold text-3xl">Hi, I'm Fahren Al Faqih</h1>
       <p className="text-gray-400 mt-2 text-sm">Based in Pekanbaru, Indonesia</p>
       <p className="text-gray-300 mt-6">

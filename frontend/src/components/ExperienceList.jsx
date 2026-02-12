@@ -21,7 +21,7 @@ export default function ExperienceList() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-8">
+    <div className="max-w-4xl ">
       <div className="mb-12">
         <h2 className="font-bold text-3xl mb-2">
           Work Experience
